@@ -44,12 +44,47 @@ Self-hosted marketing automation backbone for Farber.Inc Media Group.
 | **Mautic** (full automation) | Overkill at current scale | Add when 5+ clients active |
 | **Plausible** (analytics) | We already have GA4 + GSC | Add only if client requires privacy-first analytics |
 
+## ✅ Monthly SEO Report System (LIVE)
+
+**Generates 4-page Farber.Inc-branded PDF reports for clients.**
+
+- **Schedule:** 1st of every month at 8:00 AM ET (Hermes cron `618e5cdfdc9f`)
+- **Clients:** Anders NSB, Farber.Inc, Clear Intentions (3 active)
+- **Data sources:** GA4 + Search Console + Ubersuggest MCP
+- **Output:** PDF (exactly 4 pages, ~450KB each)
+- **Location:** `seo-reports/output/<Client>_<Month>_<Year>_SEO_Report.pdf`
+
+### How it works
+1. `data_fetcher.py` pulls fresh data from GA4, Search Console, Ubersuggest
+2. `render_report.py` fills the HTML template with client data
+3. Playwright Chromium renders HTML → PDF
+4. `pypdf` verifies the PDF has exactly 4 pages
+
+### Sample output
+- `output/Anders_NSB_July_2026_SEO_Report.pdf` (468 KB, 4 pages)
+- `output/Farber.Inc_Media_Group_July_2026_SEO_Report.pdf` (452 KB, 4 pages)
+
+### Page structure
+1. **Cover** — Navy gradient, client logo, name, locale, month
+2. **Executive Summary** — Lede paragraph, 3 metric cards, navy callout, "What This Means" + "Next 30 Days" panels
+3. **How People Found You** — Donut chart + bar charts + LinkedIn Performance block
+4. **Search & Opportunity** — Top 5 queries, Quick Win card, Focused Items 2×2 grid
+
+### Running manually
+```bash
+# All clients
+python seo-reports/render_report.py --all
+
+# Specific client
+python seo-reports/render_report.py anders-nsb
+```
+
 ## n8n Workflows (To Build)
 
 ### High Priority
 - [ ] **Daily GA4 → analytics repo:** Pull 7-day traffic data, save as `analytics/daily/YYYY-MM-DD.json`
 - [ ] **Weekly Ubersuggest rank check:** Pull top 10 keyword positions for each client, alert on drops > 5
-- [ ] **Monthly client report:** Auto-generate `clients/<slug>/reports/YYYY-MM.md` from all data sources
+- [x] **Monthly client report:** Auto-generate PDF reports (✅ Done — see above)
 - [ ] **AEO monitoring:** Daily check if client content is cited in AI answers (Perplexity, ChatGPT)
 
 ### Medium Priority
@@ -61,6 +96,7 @@ Self-hosted marketing automation backbone for Farber.Inc Media Group.
 - [ ] **Backlink monitoring:** Daily check for new backlinks via Ubersuggest
 - [ ] **Competitor alerts:** When competitor publishes content (via RSS), notify
 - [ ] **Auto social posts from blog:** Generate 5 social snippets from each blog post
+- [ ] **LinkedIn API integration:** Replace — placeholders on page 3 with real LinkedIn analytics
 
 ## Setup Instructions
 
