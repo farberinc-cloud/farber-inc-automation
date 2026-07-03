@@ -1,0 +1,10 @@
+slug,business_name,domain,ga4_property_id,locale,logo_url
+anders-nsb,Anders NSB,andersnsb.com,522083745,New Smyrna Beach & Daytona Beach FL,anders-nsb-logo.svg
+farber-inc,Farber.Inc Media Group,farberinc.media,528246119,Stuart FL,farber-inc-logo.png
+clear-intentions,Clear Intentions,clearintentionsww.com,529949489,,clear-intentions-logo.png
+
+# Notes:
+# - Property IDs are GA4 numeric IDs (not measurement IDs).
+# - logo_url is relative to the templates/ folder.
+# - Anders NSB logo is currently a placeholder SVG; replace when their actual logo is provided.
+# - Clear Intentions logo not yet added.
