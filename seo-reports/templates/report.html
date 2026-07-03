@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{CLIENT_NAME}} — {{MONTH_YEAR}} SEO Report</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- PAGE 1 — COVER -->
+<!-- ============================================================ -->
+<section class="page page1">
+  <div class="cover-bg"></div>
+  <div class="cover-inner">
+    <img class="brand-logo" src="{{LOGO_URL}}" alt="Farber.Inc">
+    <div class="eyebrow gold">Monthly SEO Report</div>
+    <h1 class="cover-title">{{CLIENT_NAME}}</h1>
+    <div class="cover-locale">{{LOCALE}}</div>
+    <div class="cover-divider"></div>
+    <div class="cover-month">{{MONTH_YEAR}}</div>
+    <div class="cover-footer-tag">SEO <span class="dot">·</span> AEO <span class="dot">·</span> GEO</div>
+  </div>
+  <div class="pfoot">
+    <span class="pfoot-brand">FARBER.INC</span>
+    <span>·</span>
+    <span>farberinc.media</span>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- PAGE 2 — EXECUTIVE SUMMARY -->
+<!-- ============================================================ -->
+<section class="page page2">
+  <div class="pad">
+    <div class="eyebrow">Executive Summary</div>
+    <h2 class="section-title">A Strong Month for {{CLIENT_SHORT}}</h2>
+
+    <p class="lede">{{LEDE_PARAGRAPH}}</p>
+
+    <div class="metric-cards">
+      <div class="metric-card">
+        <div class="metric-eyebrow">Total Sessions</div>
+        <div class="metric-value">{{SESSIONS}}</div>
+        <div class="metric-trend {{SESSIONS_TREND_CLASS}}">{{SESSIONS_TREND}}</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-eyebrow">Search Clicks</div>
+        <div class="metric-value">{{SEARCH_CLICKS}}</div>
+        <div class="metric-trend {{CLICKS_TREND_CLASS}}">{{CLICKS_TREND}}</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-eyebrow">Domain Authority</div>
+        <div class="metric-value">{{DOMAIN_AUTHORITY}}</div>
+        <div class="metric-trend gold">{{BACKLINKS}} backlinks</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-icon">★</div>
+      <div class="callout-text">{{CALLOUT_TEXT}}</div>
+    </div>
+
+    <div class="split">
+      <div class="split-panel">
+        <div class="panel-eyebrow">What This Means</div>
+        <h3 class="panel-title">Visibility is Working</h3>
+        <p>{{MEANING_TEXT}}</p>
+      </div>
+      <div class="split-panel">
+        <div class="panel-eyebrow">Next 30 Days</div>
+        <h3 class="panel-title">Building on the Wins</h3>
+        <ul class="panel-list">
+          <li>{{ACTION_1}}</li>
+          <li>{{ACTION_2}}</li>
+          <li>{{ACTION_3}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="pfoot">
+    <span class="pfoot-brand">FARBER.INC</span>
+    <span>·</span>
+    <span>{{CLIENT_NAME}} · {{MONTH_YEAR}}</span>
+    <span>·</span>
+    <span>Page 2 of 4</span>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- PAGE 3 — HOW PEOPLE FOUND YOU -->
+<!-- ============================================================ -->
+<section class="page page3">
+  <div class="pad">
+    <div class="eyebrow">Performance</div>
+    <h2 class="section-title">How People Found You</h2>
+
+    <div class="donut-row">
+      <div class="donut-panel">
+        <div class="panel-eyebrow">Search vs. Maps</div>
+        <div class="donut-wrap">
+          <svg viewBox="0 0 42 42" class="donut">
+            <circle cx="21" cy="21" r="15.915" fill="none" stroke="#FAF8F5" stroke-width="6"/>
+            {{DONUT_SEARCH_ARC}}
+            {{DONUT_MAPS_ARC}}
+            {{DONUT_DIRECT_ARC}}
+            {{DONUT_OTHER_ARC}}
+          </svg>
+          <div class="donut-center">
+            <div class="donut-num">{{TOTAL_VIEWS}}</div>
+            <div class="donut-lbl">VIEWS</div>
+          </div>
+        </div>
+        <div class="donut-legend">
+          <div><span class="dot-c c-blue"></span>Search <strong>{{DONUT_SEARCH_PCT}}%</strong></div>
+          <div><span class="dot-c c-green"></span>Maps <strong>{{DONUT_MAPS_PCT}}%</strong></div>
+          <div><span class="dot-c c-orange"></span>Direct <strong>{{DONUT_DIRECT_PCT}}%</strong></div>
+          <div><span class="dot-c c-red"></span>Other <strong>{{DONUT_OTHER_PCT}}%</strong></div>
+        </div>
+      </div>
+
+      <div class="bars-panel">
+        <div class="panel-eyebrow">Channel Breakdown</div>
+        <div class="bar-group">
+          <div class="bar-row">
+            <div class="bar-lbl">Organic Search</div>
+            <div class="bar"><span style="width:{{ORGANIC_PCT}}%" class="bar-blue"></span></div>
+            <div class="bar-val">{{ORGANIC_VAL}}</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-lbl">Direct</div>
+            <div class="bar"><span style="width:{{DIRECT_PCT}}%" class="bar-orange"></span></div>
+            <div class="bar-val">{{DIRECT_VAL}}</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-lbl">Referral</div>
+            <div class="bar"><span style="width:{{REFERRAL_PCT}}%" class="bar-green"></span></div>
+            <div class="bar-val">{{REFERRAL_VAL}}</div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-lbl">Social</div>
+            <div class="bar"><span style="width:{{SOCIAL_PCT}}%" class="bar-red"></span></div>
+            <div class="bar-val">{{SOCIAL_VAL}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="li-block">
+      <div class="li-header">
+        <span class="li-badge">in</span>
+        <span class="li-eyebrow">LinkedIn Performance</span>
+      </div>
+      <div class="li-cards">
+        <div class="li-card">
+          <div class="li-num">{{LI_IMPRESSIONS}}</div>
+          <div class="li-lbl">Post Impressions</div>
+          <div class="li-sub">(7 days)</div>
+          <div class="li-trend {{LI_IMPRESSIONS_TREND_CLASS}}">{{LI_IMPRESSIONS_TREND}}</div>
+        </div>
+        <div class="li-card">
+          <div class="li-num">{{LI_FOLLOWERS}}</div>
+          <div class="li-lbl">Followers</div>
+          <div class="li-sub">total</div>
+          <div class="li-trend gold">{{LI_FOLLOWERS_DELTA}}</div>
+        </div>
+        <div class="li-card">
+          <div class="li-num">{{LI_VIEWERS}}</div>
+          <div class="li-lbl">Profile Viewers</div>
+          <div class="li-sub">(90 days)</div>
+          <div class="li-trend {{LI_VIEWERS_TREND_CLASS}}">{{LI_VIEWERS_TREND}}</div>
+        </div>
+        <div class="li-card">
+          <div class="li-num">{{LI_SEARCH}}</div>
+          <div class="li-lbl">Search Appearances</div>
+          <div class="li-sub">(week)</div>
+          <div class="li-trend {{LI_SEARCH_TREND_CLASS}}">{{LI_SEARCH_TREND}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pfoot">
+    <span class="pfoot-brand">FARBER.INC</span>
+    <span>·</span>
+    <span>{{CLIENT_NAME}} · {{MONTH_YEAR}}</span>
+    <span>·</span>
+    <span>Page 3 of 4</span>
+  </div>
+</section>
+
+
+<!-- ============================================================ -->
+<!-- PAGE 4 — SEARCH + OPPORTUNITY + FOCUSED ITEMS -->
+<!-- ============================================================ -->
+<section class="page page4">
+  <div class="pad">
+    <div class="eyebrow">Search & Opportunity</div>
+    <h2 class="section-title">What People Search & Where We Grow</h2>
+
+    <div class="qlist">
+      <div class="qlist-eyebrow">Top 5 Search Queries This Month</div>
+      {{TOP_QUERIES_LIST}}
+    </div>
+
+    <div class="opp">
+      <div class="opp-eyebrow">Quick Win Opportunity</div>
+      <div class="opp-headline">"{{QUICK_WIN_KW}}"</div>
+      <div class="opp-detail">
+        Currently ranking position <strong>{{QUICK_WIN_POS}}</strong>.
+        Optimizing <strong>{{QUICK_WIN_URL}}</strong> for this term could
+        move it into the top 3 within 30–60 days.
+      </div>
+      <div class="opp-cta">Recommended: On-page optimization →</div>
+    </div>
+
+    <div class="recs">
+      <div class="recs-eyebrow">Focused Items</div>
+      <div class="recs-heading">Our Cadence for {{NEXT_MONTH}}</div>
+      <div class="rec-grid">
+        <div class="rec">
+          <div class="rec-num">01</div>
+          <div class="rec-title">2 LinkedIn Posts / Week</div>
+          <div class="rec-desc">Continue building brand presence with consistent value-driven content.</div>
+        </div>
+        <div class="rec">
+          <div class="rec-num">02</div>
+          <div class="rec-title">1 GBP Update / Week</div>
+          <div class="rec-desc">Fresh photos, posts, and Q&amp;As keep your Maps ranking active.</div>
+        </div>
+        <div class="rec">
+          <div class="rec-num">03</div>
+          <div class="rec-title">Optimize for "{{QUICK_WIN_KW}}"</div>
+          <div class="rec-desc">Target on-page improvements to capture this quick-win keyword.</div>
+        </div>
+        <div class="rec">
+          <div class="rec-num">04</div>
+          <div class="rec-title">{{FOURTH_ACTION_TITLE}}</div>
+          <div class="rec-desc">{{FOURTH_ACTION_DESC}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pfoot">
+    <span class="pfoot-brand">FARBER.INC</span>
+    <span>·</span>
+    <span>{{CLIENT_NAME}} · {{MONTH_YEAR}}</span>
+    <span>·</span>
+    <span>Page 4 of 4</span>
+  </div>
+</section>
+
+</body>
+</html>
