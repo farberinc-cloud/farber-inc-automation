@@ -12,19 +12,41 @@
 <!-- ============================================================ -->
 <section class="page page1">
   <div class="cover-bg"></div>
-  <div class="cover-inner">
-    <img class="brand-logo" src="{{LOGO_URL}}" alt="Farber.Inc">
-    <div class="eyebrow gold">Monthly SEO Report</div>
-    <h1 class="cover-title">{{CLIENT_NAME}}</h1>
-    <div class="cover-locale">{{LOCALE}}</div>
-    <div class="cover-divider"></div>
-    <div class="cover-month">{{MONTH_YEAR}}</div>
-    <div class="cover-footer-tag">SEO <span class="dot">·</span> AEO <span class="dot">·</span> GEO</div>
+
+  <!-- Farber.Inc logo top-left -->
+  <div class="cover-logo">
+    <img src="farber-inc-logo.png" alt="Farber.Inc">
+    <div class="cover-logo-tag">SEO &nbsp;·&nbsp; AEO &nbsp;·&nbsp; GEO</div>
   </div>
-  <div class="pfoot">
-    <span class="pfoot-brand">FARBER.INC</span>
-    <span>·</span>
-    <span>farberinc.media</span>
+
+  <!-- Farber.Inc brand bottom-left -->
+  <div class="cover-brand-bottom">
+    <div class="cover-brand-line">FARBER INC</div>
+    <div class="cover-brand-sub">Advertising &amp; Marketing Consulting</div>
+  </div>
+
+  <!-- Date bottom-right -->
+  <div class="cover-date">
+    <div class="cover-date-line">{{MONTH_YEAR}}</div>
+  </div>
+
+  <!-- Main content centered -->
+  <div class="cover-content">
+    <div class="cover-eyebrow">{{COVER_TAGLINE}}</div>
+    <h1 class="cover-title">Search &amp; Local Visibility</h1>
+    <p class="cover-lede">{{COVER_LEDE}}</p>
+
+    <!-- Prepared for card -->
+    <div class="prepared-card">
+      <div class="prepared-eyebrow">PREPARED FOR</div>
+      <div class="prepared-name">{{CLIENT_NAME}}</div>
+      <div class="prepared-locale">{{LOCALE}}</div>
+    </div>
+  </div>
+
+  <div class="pfoot pfoot-cover">
+    <span class="pfoot-client">{{CLIENT_NAME}} &nbsp;·&nbsp; {{MONTH_YEAR}}</span>
+    <span class="pfoot-brand">FARBER.INC &nbsp;·&nbsp; PAGE 01</span>
   </div>
 </section>
 
@@ -34,58 +56,84 @@
 <!-- ============================================================ -->
 <section class="page page2">
   <div class="pad">
-    <div class="eyebrow">Executive Summary</div>
-    <h2 class="section-title">A Strong Month for {{CLIENT_SHORT}}</h2>
+    <div class="eyebrow">EXECUTIVE SUMMARY</div>
+    <h2 class="section-title">{{PAGE2_TITLE}}</h2>
 
-    <p class="lede">{{LEDE_PARAGRAPH}}</p>
+    <!-- Big navy headline card -->
+    <div class="headline-card">
+      <div class="headline-eyebrow">THE HEADLINE</div>
+      <p class="headline-body">{{HEADLINE_BODY}}</p>
+    </div>
 
+    <!-- 3 metric cards with icons + trend pills -->
     <div class="metric-cards">
       <div class="metric-card">
-        <div class="metric-eyebrow">Total Sessions</div>
-        <div class="metric-value">{{SESSIONS}}</div>
-        <div class="metric-trend {{SESSIONS_TREND_CLASS}}">{{SESSIONS_TREND}}</div>
+        <div class="metric-top">
+          <div class="metric-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 5C7 5 3 9 3 14s4 9 9 9 9-4 9-9" stroke="#0A1628" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="3" fill="#0A1628"/>
+            </svg>
+          </div>
+          {{METRIC_1_TREND_PILL}}
+        </div>
+        <div class="metric-value">{{METRIC_1_VALUE}}</div>
+        <div class="metric-label">{{METRIC_1_LABEL}}</div>
+        <div class="metric-desc">{{METRIC_1_DESC}}</div>
       </div>
+
       <div class="metric-card">
-        <div class="metric-eyebrow">Search Clicks</div>
-        <div class="metric-value">{{SEARCH_CLICKS}}</div>
-        <div class="metric-trend {{CLICKS_TREND_CLASS}}">{{CLICKS_TREND}}</div>
+        <div class="metric-top">
+          <div class="metric-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <circle cx="11" cy="11" r="7" stroke="#0A1628" stroke-width="2"/>
+              <line x1="16" y1="16" x2="21" y2="21" stroke="#0A1628" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          {{METRIC_2_TREND_PILL}}
+        </div>
+        <div class="metric-value">{{METRIC_2_VALUE}}</div>
+        <div class="metric-label">{{METRIC_2_LABEL}}</div>
+        <div class="metric-desc">{{METRIC_2_DESC}}</div>
       </div>
+
       <div class="metric-card">
-        <div class="metric-eyebrow">Domain Authority</div>
-        <div class="metric-value">{{DOMAIN_AUTHORITY}}</div>
-        <div class="metric-trend gold">{{BACKLINKS}} backlinks</div>
+        <div class="metric-top">
+          <div class="metric-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="9" stroke="#0A1628" stroke-width="2"/>
+              <circle cx="12" cy="12" r="4" fill="#B8860B"/>
+            </svg>
+          </div>
+          {{METRIC_3_TREND_PILL}}
+        </div>
+        <div class="metric-value">{{METRIC_3_VALUE}}</div>
+        <div class="metric-label">{{METRIC_3_LABEL}}</div>
+        <div class="metric-desc">{{METRIC_3_DESC}}</div>
       </div>
     </div>
 
-    <div class="callout">
-      <div class="callout-icon">★</div>
-      <div class="callout-text">{{CALLOUT_TEXT}}</div>
-    </div>
+    <!-- What this means section -->
+    <div class="what-section">
+      <div class="eyebrow">WHAT THIS MEANS</div>
+      <h3 class="section-title-small">{{WHAT_TITLE}}</h3>
 
-    <div class="split">
-      <div class="split-panel">
-        <div class="panel-eyebrow">What This Means</div>
-        <h3 class="panel-title">Visibility is Working</h3>
-        <p>{{MEANING_TEXT}}</p>
-      </div>
-      <div class="split-panel">
-        <div class="panel-eyebrow">Next 30 Days</div>
-        <h3 class="panel-title">Building on the Wins</h3>
-        <ul class="panel-list">
-          <li>{{ACTION_1}}</li>
-          <li>{{ACTION_2}}</li>
-          <li>{{ACTION_3}}</li>
-        </ul>
+      <div class="what-grid">
+        <div class="what-panel">
+          <h4 class="what-panel-title">{{WHAT_PANEL_1_TITLE}}</h4>
+          <p>{{WHAT_PANEL_1_BODY}}</p>
+        </div>
+        <div class="what-panel">
+          <h4 class="what-panel-title">{{WHAT_PANEL_2_TITLE}}</h4>
+          <p>{{WHAT_PANEL_2_BODY}}</p>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="pfoot">
-    <span class="pfoot-brand">FARBER.INC</span>
-    <span>·</span>
-    <span>{{CLIENT_NAME}} · {{MONTH_YEAR}}</span>
-    <span>·</span>
-    <span>Page 2 of 4</span>
+    <span class="pfoot-client">{{CLIENT_NAME}} &nbsp;·&nbsp; {{MONTH_YEAR}}</span>
+    <span class="pfoot-brand">FARBER.INC &nbsp;·&nbsp; PAGE 02</span>
   </div>
 </section>
 
@@ -95,162 +143,190 @@
 <!-- ============================================================ -->
 <section class="page page3">
   <div class="pad">
-    <div class="eyebrow">Performance</div>
+    <div class="eyebrow">PROFILE ENGAGEMENT</div>
     <h2 class="section-title">How People Found You</h2>
 
-    <div class="donut-row">
-      <div class="donut-panel">
-        <div class="panel-eyebrow">Search vs. Maps</div>
+    <!-- Donut + legend panel -->
+    <div class="donut-card">
+      <div class="donut-card-header">
+        <div class="donut-card-title">Platform &amp; Device Breakdown</div>
+        <div class="donut-card-total">{{TOTAL_VIEWS}} total profile views</div>
+      </div>
+
+      <div class="donut-body">
         <div class="donut-wrap">
           <svg viewBox="0 0 42 42" class="donut">
             <circle cx="21" cy="21" r="15.915" fill="none" stroke="#FAF8F5" stroke-width="6"/>
-            {{DONUT_SEARCH_ARC}}
-            {{DONUT_MAPS_ARC}}
-            {{DONUT_DIRECT_ARC}}
-            {{DONUT_OTHER_ARC}}
+            {{DONUT_ARC_1}}
+            {{DONUT_ARC_2}}
+            {{DONUT_ARC_3}}
+            {{DONUT_ARC_4}}
           </svg>
           <div class="donut-center">
             <div class="donut-num">{{TOTAL_VIEWS}}</div>
             <div class="donut-lbl">VIEWS</div>
           </div>
         </div>
-        <div class="donut-legend">
-          <div><span class="dot-c c-blue"></span>Search <strong>{{DONUT_SEARCH_PCT}}%</strong></div>
-          <div><span class="dot-c c-green"></span>Maps <strong>{{DONUT_MAPS_PCT}}%</strong></div>
-          <div><span class="dot-c c-orange"></span>Direct <strong>{{DONUT_DIRECT_PCT}}%</strong></div>
-          <div><span class="dot-c c-red"></span>Other <strong>{{DONUT_OTHER_PCT}}%</strong></div>
-        </div>
-      </div>
 
-      <div class="bars-panel">
-        <div class="panel-eyebrow">Channel Breakdown</div>
-        <div class="bar-group">
-          <div class="bar-row">
-            <div class="bar-lbl">Organic Search</div>
-            <div class="bar"><span style="width:{{ORGANIC_PCT}}%" class="bar-blue"></span></div>
-            <div class="bar-val">{{ORGANIC_VAL}}</div>
-          </div>
-          <div class="bar-row">
-            <div class="bar-lbl">Direct</div>
-            <div class="bar"><span style="width:{{DIRECT_PCT}}%" class="bar-orange"></span></div>
-            <div class="bar-val">{{DIRECT_VAL}}</div>
-          </div>
-          <div class="bar-row">
-            <div class="bar-lbl">Referral</div>
-            <div class="bar"><span style="width:{{REFERRAL_PCT}}%" class="bar-green"></span></div>
-            <div class="bar-val">{{REFERRAL_VAL}}</div>
-          </div>
-          <div class="bar-row">
-            <div class="bar-lbl">Social</div>
-            <div class="bar"><span style="width:{{SOCIAL_PCT}}%" class="bar-red"></span></div>
-            <div class="bar-val">{{SOCIAL_VAL}}</div>
-          </div>
+        <div class="donut-legend">
+          {{LEGEND_1}}
+          {{LEGEND_2}}
+          {{LEGEND_3}}
+          {{LEGEND_4}}
         </div>
       </div>
     </div>
 
+    <!-- 2 split bar charts -->
+    <div class="bars-grid">
+      <div class="bar-card">
+        <div class="bar-card-title">{{BAR_1_TITLE}}</div>
+        <div class="bar-row">
+          <div class="bar-lbl">{{BAR_1_LBL_1}}</div>
+          <div class="bar"><span style="width:{{BAR_1_PCT_1}}%" class="bar-gradient-orange"></span></div>
+          <div class="bar-val">{{BAR_1_VAL_1}}</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">{{BAR_1_LBL_2}}</div>
+          <div class="bar"><span style="width:{{BAR_1_PCT_2}}%" class="bar-gradient-green"></span></div>
+          <div class="bar-val">{{BAR_1_VAL_2}}</div>
+        </div>
+      </div>
+
+      <div class="bar-card">
+        <div class="bar-card-title">{{BAR_2_TITLE}}</div>
+        <div class="bar-row">
+          <div class="bar-lbl">{{BAR_2_LBL_1}}</div>
+          <div class="bar"><span style="width:{{BAR_2_PCT_1}}%" class="bar-gradient-orange"></span></div>
+          <div class="bar-val">{{BAR_2_VAL_1}}</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">{{BAR_2_LBL_2}}</div>
+          <div class="bar"><span style="width:{{BAR_2_PCT_2}}%" class="bar-gradient-blue"></span></div>
+          <div class="bar-val">{{BAR_2_VAL_2}}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LinkedIn block -->
     <div class="li-block">
       <div class="li-header">
-        <span class="li-badge">in</span>
-        <span class="li-eyebrow">LinkedIn Performance</span>
+        <div class="li-badge">in</div>
+        <div>
+          <div class="li-title">LinkedIn Performance</div>
+          <div class="li-eyebrow">TRACK PERFORMANCE &nbsp;·&nbsp; LAST 7–90 DAYS</div>
+        </div>
       </div>
       <div class="li-cards">
         <div class="li-card">
           <div class="li-num">{{LI_IMPRESSIONS}}</div>
-          <div class="li-lbl">Post Impressions</div>
-          <div class="li-sub">(7 days)</div>
-          <div class="li-trend {{LI_IMPRESSIONS_TREND_CLASS}}">{{LI_IMPRESSIONS_TREND}}</div>
+          <div class="li-lbl">Post impressions</div>
+          <div class="li-sub">PAST 7 DAYS</div>
+          <div class="li-trend {{LI_IMPRESSIONS_CLASS}}">{{LI_IMPRESSIONS_TREND}}</div>
+          <div class="li-vs">vs prior 7 days</div>
         </div>
         <div class="li-card">
           <div class="li-num">{{LI_FOLLOWERS}}</div>
-          <div class="li-lbl">Followers</div>
-          <div class="li-sub">total</div>
-          <div class="li-trend gold">{{LI_FOLLOWERS_DELTA}}</div>
+          <div class="li-lbl">Total followers</div>
+          <div class="li-sub">AUDIENCE BASE</div>
+          <div class="li-trend {{LI_FOLLOWERS_CLASS}}">{{LI_FOLLOWERS_TREND}}</div>
+          <div class="li-vs">vs prior 7 days</div>
         </div>
         <div class="li-card">
           <div class="li-num">{{LI_VIEWERS}}</div>
-          <div class="li-lbl">Profile Viewers</div>
-          <div class="li-sub">(90 days)</div>
-          <div class="li-trend {{LI_VIEWERS_TREND_CLASS}}">{{LI_VIEWERS_TREND}}</div>
+          <div class="li-lbl">Profile viewers</div>
+          <div class="li-sub">PAST 90 DAYS</div>
+          <div class="li-trend {{LI_VIEWERS_CLASS}}">{{LI_VIEWERS_TREND}}</div>
+          <div class="li-vs">vs prior period</div>
         </div>
         <div class="li-card">
           <div class="li-num">{{LI_SEARCH}}</div>
-          <div class="li-lbl">Search Appearances</div>
-          <div class="li-sub">(week)</div>
-          <div class="li-trend {{LI_SEARCH_TREND_CLASS}}">{{LI_SEARCH_TREND}}</div>
+          <div class="li-lbl">Search appearances</div>
+          <div class="li-sub">{{LI_SEARCH_PERIOD}}</div>
+          <div class="li-trend {{LI_SEARCH_CLASS}}">{{LI_SEARCH_TREND}}</div>
+          <div class="li-vs">vs {{LI_SEARCH_VS}}</div>
         </div>
       </div>
     </div>
   </div>
 
   <div class="pfoot">
-    <span class="pfoot-brand">FARBER.INC</span>
-    <span>·</span>
-    <span>{{CLIENT_NAME}} · {{MONTH_YEAR}}</span>
-    <span>·</span>
-    <span>Page 3 of 4</span>
+    <span class="pfoot-client">{{CLIENT_NAME}} &nbsp;·&nbsp; {{MONTH_YEAR}}</span>
+    <span class="pfoot-brand">FARBER.INC &nbsp;·&nbsp; PAGE 03</span>
   </div>
 </section>
 
 
 <!-- ============================================================ -->
-<!-- PAGE 4 — SEARCH + OPPORTUNITY + FOCUSED ITEMS -->
+<!-- PAGE 4 — SEARCH + OPPORTUNITY + CADENCE -->
 <!-- ============================================================ -->
 <section class="page page4">
   <div class="pad">
-    <div class="eyebrow">Search & Opportunity</div>
-    <h2 class="section-title">What People Search & Where We Grow</h2>
+    <div class="eyebrow">SEARCH VISIBILITY</div>
+    <h2 class="section-title">{{PAGE4_TITLE}}</h2>
 
-    <div class="qlist">
-      <div class="qlist-eyebrow">Top 5 Search Queries This Month</div>
-      {{TOP_QUERIES_LIST}}
-    </div>
-
-    <div class="opp">
-      <div class="opp-eyebrow">Quick Win Opportunity</div>
-      <div class="opp-headline">"{{QUICK_WIN_KW}}"</div>
-      <div class="opp-detail">
-        Currently ranking position <strong>{{QUICK_WIN_POS}}</strong>.
-        Optimizing <strong>{{QUICK_WIN_URL}}</strong> for this term could
-        move it into the top 3 within 30–60 days.
+    <!-- Top queries card -->
+    <div class="queries-card">
+      <div class="queries-header">
+        <div class="queries-title">Top Search Queries</div>
+        <div class="queries-sub">Terms that surfaced your profile in {{MONTH_YEAR}}</div>
       </div>
-      <div class="opp-cta">Recommended: On-page optimization →</div>
+      <div class="queries-list">
+        {{TOP_QUERIES_LIST}}
+      </div>
+      <div class="queries-note">
+        <strong>Great news:</strong> {{TOP_QUERIES_NOTE}}
+      </div>
     </div>
 
-    <div class="recs">
-      <div class="recs-eyebrow">Focused Items</div>
-      <div class="recs-heading">Our Cadence for {{NEXT_MONTH}}</div>
-      <div class="rec-grid">
-        <div class="rec">
-          <div class="rec-num">01</div>
-          <div class="rec-title">2 LinkedIn Posts / Week</div>
-          <div class="rec-desc">Continue building brand presence with consistent value-driven content.</div>
+    <!-- Quick win card (cream with star) -->
+    <div class="quickwin-section">
+      <div class="eyebrow">QUICK-WIN OPPORTUNITY</div>
+      <h3 class="section-title-small">One Clear Next Step</h3>
+
+      <div class="quickwin-card">
+        <div class="quickwin-icon">★</div>
+        <div class="quickwin-body">
+          <div class="quickwin-keyword">"{{QUICK_WIN_KW}}"</div>
+          <p class="quickwin-text">{{QUICK_WIN_TEXT}}</p>
+          <a class="quickwin-url">{{QUICK_WIN_URL}}</a>
         </div>
-        <div class="rec">
-          <div class="rec-num">02</div>
-          <div class="rec-title">1 GBP Update / Week</div>
-          <div class="rec-desc">Fresh photos, posts, and Q&amp;As keep your Maps ranking active.</div>
+      </div>
+    </div>
+
+    <!-- Focused items 2x2 -->
+    <div class="cadence-section">
+      <div class="eyebrow">FOCUSED ITEMS</div>
+      <h3 class="section-title-small">Our Cadence for {{NEXT_MONTH}}</h3>
+
+      <div class="cadence-grid">
+        <div class="cadence-card">
+          <div class="cadence-num">01</div>
+          <h4 class="cadence-title">{{CADENCE_1_TITLE}}</h4>
+          <p>{{CADENCE_1_BODY}}</p>
         </div>
-        <div class="rec">
-          <div class="rec-num">03</div>
-          <div class="rec-title">Optimize for "{{QUICK_WIN_KW}}"</div>
-          <div class="rec-desc">Target on-page improvements to capture this quick-win keyword.</div>
+        <div class="cadence-card">
+          <div class="cadence-num">02</div>
+          <h4 class="cadence-title">{{CADENCE_2_TITLE}}</h4>
+          <p>{{CADENCE_2_BODY}}</p>
         </div>
-        <div class="rec">
-          <div class="rec-num">04</div>
-          <div class="rec-title">{{FOURTH_ACTION_TITLE}}</div>
-          <div class="rec-desc">{{FOURTH_ACTION_DESC}}</div>
+        <div class="cadence-card">
+          <div class="cadence-num">03</div>
+          <h4 class="cadence-title">{{CADENCE_3_TITLE}}</h4>
+          <p>{{CADENCE_3_BODY}}</p>
+        </div>
+        <div class="cadence-card">
+          <div class="cadence-num">04</div>
+          <h4 class="cadence-title">{{CADENCE_4_TITLE}}</h4>
+          <p>{{CADENCE_4_BODY}}</p>
         </div>
       </div>
     </div>
   </div>
 
   <div class="pfoot">
-    <span class="pfoot-brand">FARBER.INC</span>
-    <span>·</span>
-    <span>{{CLIENT_NAME}} · {{MONTH_YEAR}}</span>
-    <span>·</span>
-    <span>Page 4 of 4</span>
+    <span class="pfoot-client">{{CLIENT_NAME}} &nbsp;·&nbsp; {{MONTH_YEAR}}</span>
+    <span class="pfoot-brand">FARBER.INC &nbsp;·&nbsp; PAGE 04</span>
   </div>
 </section>
 
